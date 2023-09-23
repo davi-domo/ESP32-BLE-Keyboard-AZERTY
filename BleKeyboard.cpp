@@ -213,10 +213,11 @@ void BleKeyboard::sendReport(MediaKeyReport* keys)
 }
 
 extern
-const uint8_t _asciimap[128] PROGMEM;
+const uint8_t _asciimap[256] PROGMEM;
 
 #define SHIFT 0x80
-const uint8_t _asciimap[128] =
+#define ALTGR 0x40
+const uint8_t _asciimap[256] =
 {
 	
   0x00,             // NUL
